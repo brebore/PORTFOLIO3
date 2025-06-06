@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bernard Robee Dilao | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="dark-mode">
+  <header>
+    <div class="logo">Bernard Robee <span>Dilao</span></div>
+    <nav>
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" onclick="toggleTheme()">🌙 Toggle Theme</button>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-img">
+      <img src="Bernard.png.jfif" alt="Bernard Robee Dilao" />
+    </div>
+    <div class="hero-text">
+      <h1>Hey, I'm <span class="typing">Bernard</span></h1>
+      <h2>Aspiring Full-Stack Developer</h2>
+      <p>I'm an IT student passionate about technology and development. I specialize in building websites and learning new tools to create real-world digital solutions.</p>
+      <div class="socials">
+        <a href="https://www.facebook.com/rb.dilao.148?mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/invites/contact/?igsh=1i0n4fqzcrlxn&utm_content=mxmczda" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+      <a href="#contact" class="btn">Hire me</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <p class="about-text">
+      Hello! I'm Bernard Robee Dilao, an IT student deeply passionate about web development and digital technologies. I enjoy building responsive and functional websites, learning new frameworks, and continuously improving my coding skills.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills">
+      <div class="card">HTML & CSS</div>
+      <div class="card">JavaScript</div>
+      <div class="card">Responsive Design</div>
+      <div class="card">Git & Visual Studio Code</div>
+    </div>
+  </section>
+
+  <section id="certificates">
+    <h2 class="section-title">Certificates</h2>
+    <div class="certificates">
+      <div class="card">Coming soon!</div>
+      <div class="card">Coming soon!</div>
+      <div class="card">Coming soon!</div>
+    </div>
+  </section>
+
+  <section id="achievements">
+    <h2 class="section-title">Achievements</h2>
+    <div class="achievements">
+      <div class="card">Coming soon!</div>
+      <div class="card">Coming soon!</div>
+      <div class="card">Coming soon!</div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <p>Email: Rklover621@gmail.com</p>
+    <p>Phone: 09154942539</p>
+    <form id="contact-form" action="https://formspree.io/f/mblylera" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light-mode');
+      if (document.body.classList.contains('light-mode')) {
+        localStorage.setItem('theme', 'light');
+      } else {
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light') {
+        document.body.classList.add('light-mode');
+      }
+    });
+  </script>
+</body>
+</html>
